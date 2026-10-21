@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="김건우 | (사)대한민국 파크골프 연맹 · (사)대한민국 파워지식 교육협회 전국 총괄본부장, 스마일플러스 대표">
+<title>김건우 | 파크골프·스마일플러스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a fairway-green hero, then a park-golf scorecard spine — two roles, services, a certification scorecard, recruitment, tournaments. */
+:root {
+  --bg: #f6f8f3;
+  --surface: #ffffff;
+  --ink: #17261c;
+  --muted: #56685b;
+  --line: #d6dfd2;
+  --fairway: #1f6b3a;
+  --fairway-deep: #134a27;
+  --sun: #f5b82e;
+  --on-fairway: #f3f8ef;
+  --chip: #e8f1e3;
+  --display: "Black Han Sans", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1712; --surface: #16211a; --ink: #e6efe4; --muted: #9fb3a3; --line: #2a3a2f;
+    --fairway: #2c8a4d; --fairway-deep: #10331c; --sun: #f7c449; --on-fairway: #f3f8ef; --chip: #1d2e22;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1712; --surface: #16211a; --ink: #e6efe4; --muted: #9fb3a3; --line: #2a3a2f;
+  --fairway: #2c8a4d; --fairway-deep: #10331c; --sun: #f7c449; --on-fairway: #f3f8ef; --chip: #1d2e22;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.7; word-break: keep-all; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.2; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--fairway); }
+
+/* Hero */
+.hero { background: var(--fairway-deep); color: var(--on-fairway); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(100deg, transparent 0 46px, rgba(255,255,255,.035) 46px 92px); pointer-events: none; }
+.hero .wrap { padding-block: 64px 56px; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end; }
+.hero .eyebrow { color: var(--sun); }
+.hero h1 { font-size: clamp(56px, 12vw, 112px); margin-top: 12px; letter-spacing: .02em; }
+.hero h1 span { color: var(--sun); }
+.roles { margin-top: 20px; display: flex; flex-direction: column; gap: 4px; font-size: clamp(16px, 2.4vw, 19px); font-weight: 500; }
+.roles b { font-weight: 700; color: var(--sun); }
+.hero-contact { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-tel.mail { font-family: var(--body); font-weight: 700; font-size: clamp(18px, 3vw, 24px); letter-spacing: 0; }
+.hero-tel { max-width: 100%; min-width: 0; overflow-wrap: anywhere; display: inline-flex; align-items: center; gap: 12px; padding: 10px 22px 10px 12px; border: 2px solid var(--sun); border-radius: 99px; color: var(--on-fairway); text-decoration: none; font-family: var(--display); font-size: clamp(24px, 4vw, 32px); letter-spacing: .03em; font-variant-numeric: tabular-nums; user-select: all; }
+.hero-tel span { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; background: var(--sun); color: var(--fairway-deep); padding: 4px 10px; border-radius: 99px; user-select: none; }
+.hero-tel:hover { background: rgba(245,184,46,.12); }
+.hero-tel:focus-visible { outline: 2px solid var(--sun); outline-offset: 3px; }
+.flag { width: 132px; height: 132px; border-radius: 50%; background: var(--sun); color: var(--fairway-deep); display: grid; place-items: center; text-align: center; font-family: var(--display); font-size: 22px; line-height: 1.15; transform: rotate(-8deg); box-shadow: 0 0 0 8px rgba(245,184,46,.18); }
+.flag small { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; margin-top: 4px; }
+
+section { padding-block: 64px 0; }
+.sec-head { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+.sec-head h2 { font-size: clamp(28px, 4.4vw, 38px); }
+.sec-head p { color: var(--muted); max-width: 60ch; }
+
+/* Two roles */
+.duo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 960px) { .duo { grid-template-columns: 1fr; } }
+td .by { display: block; font-size: 13px; color: var(--muted); }
+.role { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.role .org { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); }
+.role h3 { font-size: 26px; }
+.role h3 em { font-style: normal; color: var(--fairway); }
+.role ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.role li { display: flex; gap: 10px; align-items: baseline; }
+.role li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--sun); transform: translateY(-2px); }
+
+/* Services */
+.services { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 2px solid var(--ink); }
+.svc { padding: 22px 20px 26px 0; display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid var(--line); }
+.svc + .svc { padding-left: 20px; border-left: 1px solid var(--line); }
+.svc h3 { font-size: 22px; }
+.svc p { color: var(--muted); font-size: 15px; }
+.svc .tag { align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 99px; background: var(--chip); color: var(--fairway); }
+
+/* Scorecard */
+.card-scroll { overflow-x: auto; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); }
+table { width: 100%; border-collapse: collapse; min-width: 560px; font-variant-numeric: tabular-nums; }
+th, td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+thead th { background: var(--fairway); color: var(--on-fairway); font-family: var(--mono); font-size: 12px; letter-spacing: .1em; font-weight: 500; }
+tbody tr:last-child td { border-bottom: 0; }
+td.no { font-family: var(--mono); color: var(--muted); width: 64px; }
+td.grade { font-family: var(--display); font-size: 20px; color: var(--fairway); width: 90px; }
+.pill { display: inline-block; font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 99px; white-space: nowrap; }
+.pill.open { background: var(--sun); color: #3a2a00; }
+.pill.held { background: var(--chip); color: var(--fairway); }
+.note { margin-top: 12px; font-size: 14px; color: var(--muted); }
+
+/* Recruit + tournaments */
+.split { display: grid; grid-template-columns: 1.15fr 1fr; gap: 20px; }
+.recruit { background: var(--sun); color: #2b2100; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
+.recruit .eyebrow { color: #5a4300; }
+.recruit h2 { font-size: clamp(30px, 4.6vw, 42px); }
+.recruit .posts { display: flex; flex-wrap: wrap; gap: 10px; }
+.recruit .posts span { background: #2b2100; color: var(--sun); font-weight: 700; padding: 6px 16px; border-radius: 99px; }
+.tour { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
+.tour h2 { font-size: clamp(26px, 3.8vw, 34px); }
+.steps { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.steps li { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: flex; flex-direction: column; }
+.contact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.ct { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.ct div { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.ct .lbl { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); }
+.ct a { font-family: var(--display); font-size: clamp(22px, 3.6vw, 30px); color: var(--fairway); text-decoration: none; overflow-wrap: anywhere; user-select: all; }
+.ct button { font: inherit; font-size: 14px; font-weight: 700; border: 1px solid var(--fairway); background: transparent; color: var(--fairway); border-radius: 99px; padding: 6px 16px; cursor: pointer; }
+.ct button:hover { background: var(--chip); }
+.ct button:focus-visible { outline: 2px solid var(--sun); outline-offset: 2px; }
+@media (max-width: 760px) { .contact { grid-template-columns: 1fr; } }
+.steps li b { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--fairway); font-weight: 500; }
+
+footer { margin-top: 72px; border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 28px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 14px; }
+footer strong { color: var(--ink); }
+
+@media (max-width: 760px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .flag { width: 104px; height: 104px; font-size: 18px; justify-self: start; }
+  .duo, .split { grid-template-columns: 1fr; }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .svc:nth-child(3) { padding-left: 0; border-left: 0; }
+}
+@media (max-width: 420px) {
+  .services { grid-template-columns: 1fr; }
+  .svc + .svc { padding-left: 0; border-left: 0; }
+  .steps { grid-template-columns: 1fr; }
+  .role, .recruit, .tour { padding: 24px; }
+}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Park Golf · Smile Plus</p>
+      <h1>김건우<span>.</span></h1>
+      <div class="roles">
+        <p><b>(사)대한민국 파크골프 연맹</b> 전국 총괄본부장</p>
+        <p><b>(사)대한민국 파워지식 교육협회</b> 전국 총괄본부장</p>
+        <p><b>스마일플러스</b> 대표 · 종합 이벤트</p>
+      </div>
+      <div class="hero-contact">
+        <a class="hero-tel" href="tel:01075283582"><span>TEL</span>010.7528.3582</a>
+        <a class="hero-tel mail" href="mailto:choul28ho@naver.com"><span>MAIL</span>choul28ho@naver.com</a>
+      </div>
+    </div>
+    <div class="flag" aria-hidden="true"><div>웃음과<br>함께<small>SMILE +</small></div></div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap" aria-labelledby="s-roles">
+    <div class="sec-head">
+      <p class="eyebrow">하는 일</p>
+      <h2 id="s-roles">세 개의 현장을 이끕니다</h2>
+      <p>파크골프 저변 확대와 지도자 양성, 사람을 웃게 만드는 행사, 그리고 돌봄 전문 인력 교육까지 현장에서 활동합니다.</p>
+    </div>
+    <div class="duo">
+      <article class="role">
+        <p class="org">사단법인 대한민국 파크골프 연맹</p>
+        <h3>전국 <em>총괄본부장</em></h3>
+        <ul>
+          <li>파크골프 지도자 1급 · 심판 1급 자격증반 교육</li>
+          <li>전국 본부장 · 지사장 모집 및 조직 운영</li>
+          <li>각종 파크골프 대회 유치 및 진행</li>
+        </ul>
+      </article>
+      <article class="role">
+        <p class="org">사단법인 대한민국 파워지식 교육협회</p>
+        <h3>전국 <em>총괄본부장</em></h3>
+        <ul>
+          <li>웃음치료 1급 자격증반</li>
+          <li>레크리에이션 1급 자격증반</li>
+          <li>병원동행매니저 1급 자격증반</li>
+          <li>노인돌봄생활지원사 1급 자격증반</li>
+        </ul>
+      </article>
+      <article class="role">
+        <p class="org">스마일플러스 · 종합 이벤트 회사</p>
+        <h3><em>대표</em></h3>
+        <ul>
+          <li>웃음치료 · 레크리에이션 행사 진행</li>
+          <li>체육대회 전문 행사 기획 및 진행</li>
+          <li>기관 · 단체 · 지역 행사 종합 이벤트</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="s-svc">
+    <div class="sec-head">
+      <p class="eyebrow">스마일플러스</p>
+      <h2 id="s-svc">행사 서비스</h2>
+    </div>
+    <div class="services">
+      <div class="svc"><span class="tag">1급</span><h3>웃음치료</h3><p>참가자가 함께 웃으며 마음을 여는 웃음치료 프로그램</p></div>
+      <div class="svc"><span class="tag">1급</span><h3>레크리에이션</h3><p>연령과 인원에 맞춘 단체 레크리에이션 진행</p></div>
+      <div class="svc"><span class="tag">전문</span><h3>체육대회</h3><p>기업 · 학교 · 단체 체육대회 기획부터 진행까지</p></div>
+      <div class="svc"><span class="tag">종합</span><h3>이벤트</h3><p>지역 축제, 기념 행사 등 종합 이벤트 운영</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="s-cert">
+    <div class="sec-head">
+      <p class="eyebrow">Scorecard</p>
+      <h2 id="s-cert">자격 · 교육 기록표</h2>
+      <p>현재 운영 중인 파크골프 · 웃음치료 · 레크리에이션 · 병원동행매니저 · 노인돌봄생활지원사 자격증반입니다.</p>
+    </div>
+    <div class="card-scroll">
+      <table>
+        <thead><tr><th>NO.</th><th>자격 / 과정</th><th>등급</th><th>구분</th></tr></thead>
+        <tbody>
+          <tr><td class="no">01</td><td>파크골프 지도자 자격증반<span class="by">사단법인 대한민국 파크골프 연맹</span></td><td class="grade">1급</td><td><span class="pill open">교육 운영 중</span></td></tr>
+          <tr><td class="no">02</td><td>파크골프 심판 자격증반<span class="by">사단법인 대한민국 파크골프 연맹</span></td><td class="grade">1급</td><td><span class="pill open">교육 운영 중</span></td></tr>
+          <tr><td class="no">03</td><td>웃음치료 자격증반<span class="by">사단법인 대한민국 파워지식 교육협회</span></td><td class="grade">1급</td><td><span class="pill open">교육 운영 중</span></td></tr>
+          <tr><td class="no">04</td><td>레크리에이션 자격증반<span class="by">사단법인 대한민국 파워지식 교육협회</span></td><td class="grade">1급</td><td><span class="pill open">교육 운영 중</span></td></tr>
+          <tr><td class="no">05</td><td>병원동행매니저 자격증반<span class="by">사단법인 대한민국 파워지식 교육협회</span></td><td class="grade">1급</td><td><span class="pill open">교육 운영 중</span></td></tr>
+          <tr><td class="no">06</td><td>노인돌봄생활지원사 자격증반<span class="by">사단법인 대한민국 파워지식 교육협회</span></td><td class="grade">1급</td><td><span class="pill open">교육 운영 중</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">자격증반 일정과 수강 문의는 아래 연락처로 받습니다.</p>
+  </section>
+
+  <section class="wrap" aria-label="모집 및 대회">
+    <div class="split">
+      <div class="recruit">
+        <p class="eyebrow">모집 중</p>
+        <h2>전국 본부장 · 지사장을 찾습니다</h2>
+        <p>지역에서 파크골프를 함께 키워갈 분을 모십니다. 지역 조직 운영, 자격증반 연계, 대회 개최를 함께합니다.</p>
+        <div class="posts"><span>시 · 도 본부장</span><span>지사장</span></div>
+      </div>
+      <div class="tour">
+        <p class="eyebrow">대회</p>
+        <h2>파크골프 대회 유치 · 진행</h2>
+        <p>지자체, 협회, 기관의 각종 대회를 유치하고 현장 운영까지 맡습니다.</p>
+        <ul class="steps">
+          <li><b>STEP 1</b>대회 유치 · 기획</li>
+          <li><b>STEP 2</b>코스 · 경기 운영</li>
+          <li><b>STEP 3</b>심판 배정 · 진행</li>
+          <li><b>STEP 4</b>시상 · 부대 행사</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="s-contact">
+    <div class="sec-head">
+      <p class="eyebrow">연락처</p>
+      <h2 id="s-contact">문의하기</h2>
+      <p>자격증반 수강, 본부장 · 지사장 지원, 대회 유치, 행사 섭외 모두 편하게 연락 주세요.</p>
+    </div>
+    <div class="contact">
+      <div class="ct"><div><span class="lbl">전화</span><a href="tel:01075283582">010.7528.3582</a></div><button type="button" id="copy-tel" data-copy="010-7528-3582">번호 복사</button></div>
+      <div class="ct"><div><span class="lbl">이메일</span><a href="mailto:choul28ho@naver.com">choul28ho@naver.com</a></div><button type="button" id="copy-mail" data-copy="choul28ho@naver.com">주소 복사</button></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>김건우</strong> · (사)대한민국 파크골프 연맹 · (사)대한민국 파워지식 교육협회 전국 총괄본부장 · 스마일플러스 대표</p>
+    <p>010.7528.3582 · choul28ho@naver.com</p>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (btn) {
+  var label = btn.textContent;
+  btn.addEventListener('click', function () {
+    var done = function () { btn.textContent = '복사됨'; setTimeout(function () { btn.textContent = label; }, 1600); };
+    var fallback = function () { var r = document.createRange(); r.selectNodeContents(btn.previousElementSibling.querySelector('a')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(btn.dataset.copy).then(done, fallback); } catch (e) { fallback(); }
+  });
+});
+</script>
+</body>
+</html>
